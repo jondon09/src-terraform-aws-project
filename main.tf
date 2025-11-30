@@ -1,7 +1,7 @@
 
 
 resource "aws_s3_bucket" "images-bucket" {
-  bucket = "terraform-test-bucket-20251228"
+  bucket = var.aws_s3_bucket_name
 
   tags = {
     Name        = "My bucket"
