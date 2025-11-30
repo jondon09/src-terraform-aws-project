@@ -1,27 +1,27 @@
 variable "aws_region" {
   description = "The aws region to deploy in"
-  type = "string"
-  default = "us-east-1"
+  type        = string
+  default     = "us-east-1"
 }
 
 variable "aws_profile" {
   description = "profile for Deploying resource on AWS"
-  type = "string"
-  default = "iamadmin-general"
+  type        = string
+  default     = "iamadmin-general"
 }
 
 
-variable "aws_s3_bucket_name"{
+variable "aws_s3_bucket_name" {
   description = "The Unique name of the AWS Bucket"
-  type = "string"
-  default = "terraform-test-bucket-20251228"
+  type        = string
+  default     = "terraform-test-bucket-20251228"
 }
 
-variable "aws_tags"  {
+variable "aws_tags" {
   description = "Tags to set on AWS objects"
-  type        =  map(string)
+  type        = map(string)
   default = {
-    "Team" = "GCA-platform"
+    "Team"        = "GCA-platform"
     "Environment" = "dev"
   }
 }
