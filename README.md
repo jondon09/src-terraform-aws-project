@@ -1,3 +1,3 @@
 # Terraform project to provision cloud resources on AWS
 
-<img src="/Terraform-on-aws.svg" >
+<img title="Terraform Architecture Diagram" src="/Terraform-on-aws.svg">
