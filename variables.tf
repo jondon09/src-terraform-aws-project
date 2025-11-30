@@ -17,7 +17,7 @@ variable "aws_s3_bucket_name" {
   default     = "terraform-test-bucket-20251228"
 }
 
-variable "aws_tags" {
+variable "aws_tagging" {
   description = "Tags to set on AWS objects"
   type        = map(string)
   default = {
