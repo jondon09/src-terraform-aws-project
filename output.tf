@@ -7,3 +7,13 @@ output "s3_bucket_details" {
 
   ]
 }
+
+output "s3_bucket_to_import" {
+  description = "Output attributes of our s3 bucket to import"
+  value = [
+    "bucket Id: ${aws_s3_bucket.resource_to_import.id}",
+    "bucket ARN: ${aws_s3_bucket.resource_to_import.arn}",
+    "bucket Domain: ${aws_s3_bucket.resource_to_import.bucket_domain_name}"
+
+  ]
+}
