@@ -26,3 +26,17 @@ variable "image_os" {
     error_message = "The image_os must be 'ubuntu' or 'amazon_linux' "
   }
 }
+
+variable "aws_tagging" {
+  description = "Tags to set on AWS objects"
+  type        = map(string)
+  default = {
+    "Name"        = "GCA-platform"
+    "BusinessUnit" = "GCA Platform"
+  }
+}
+
+variable "desired_azs" {
+  type    = list(string)
+  default = ["us-east-1f", "us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d"]
+}
