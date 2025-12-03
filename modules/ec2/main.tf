@@ -25,7 +25,7 @@ data "aws_ami" "amazon_linux_latest" {
   owners       = ["amazon"]
   filter {
     name   = "name"
-    values = ["*al2023-ami-2023*x86_64*"]
+    values = ["*al2023-ami-2023*-x86_64*"]
   }
   filter {
     name   = "platform-details"
@@ -44,10 +44,10 @@ data "aws_ami" "amazon_linux_latest" {
 # Retrieve latest Ubuntu Server AMI
 data "aws_ami" "ubuntu_server_latest" {
   most_recent = true
-  owners      = ["amazon"]
+  owners      = ["099720109477"]
   filter {
     name   = "name"
-    values = ["*ubuntu-jammy-22.04-amd64-server"]
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
   }
   filter {
     name   = "platform-details"
