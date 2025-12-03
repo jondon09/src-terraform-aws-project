@@ -26,7 +26,7 @@ data "aws_ami" "amazon_linux_latest" {
   }
   filter {
     name   = "platform-details"
-    values = ["Linux/Unix"]
+    values = ["Linux/UNIX"]
   }
   filter {
     name   = "root-device-type"
@@ -38,4 +38,24 @@ data "aws_ami" "amazon_linux_latest" {
   }
 }
 
-# Re
+# Retrieve latest Ubuntu Server AMI
+data "aws_ami" "ubuntu_server_latest" {
+  most_recent = true
+  owners = ["amazon"]
+  filter {
+    name = "name"
+    values = ["*ubuntu-jammy-22.04-amd64-server"]
+  }
+  filter {
+    name = "platform-details"
+    values = ["Linux/UNIX"]
+  }
+  filter {
+    name = "root-device-type"
+    values = [ebs]
+  }
+  filter {
+    name = "architecture"
+    values = ["x86_64"]
+  }
+}
