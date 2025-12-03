@@ -16,3 +16,13 @@ variable "tagging" {
     error_message = "At least one tag Must be called BusinessUnit"
   }
 }
+
+variable "image_os" {
+  type        = string
+  description = "Select the image OS. Options of 'ubuntu' or 'amazon linux'"
+
+  validation {
+    condition     = (var.image_os == "ubuntu" || var.image_os == "amazon_linux")
+    error_message = "The image_os must be 'ubuntu' or 'amazon_linux' "
+  }
+}

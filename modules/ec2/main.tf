@@ -41,21 +41,21 @@ data "aws_ami" "amazon_linux_latest" {
 # Retrieve latest Ubuntu Server AMI
 data "aws_ami" "ubuntu_server_latest" {
   most_recent = true
-  owners = ["amazon"]
+  owners      = ["amazon"]
   filter {
-    name = "name"
+    name   = "name"
     values = ["*ubuntu-jammy-22.04-amd64-server"]
   }
   filter {
-    name = "platform-details"
+    name   = "platform-details"
     values = ["Linux/UNIX"]
   }
   filter {
-    name = "root-device-type"
+    name   = "root-device-type"
     values = [ebs]
   }
   filter {
-    name = "architecture"
+    name   = "architecture"
     values = ["x86_64"]
   }
 }
