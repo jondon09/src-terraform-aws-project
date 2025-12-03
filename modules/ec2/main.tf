@@ -1,5 +1,5 @@
 resource "aws_instance" "instance" {
-  ami           = ""
+  ami           = local.image
   instance_type = var.instance_type
   root_block_device {
     encrypted = true
