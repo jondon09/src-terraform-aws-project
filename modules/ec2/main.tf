@@ -19,7 +19,7 @@ locals {
 }
 
 # Retrieve latest Amazon Linux AMI
-# Data blocks used to read data from external source
+# Data blocks used to read data from external source (AWS)
 data "aws_ami" "amazon_linux_latest" {
   most_recent = true
   owners       = ["amazon"]
