@@ -18,7 +18,7 @@ variable "aws_s3_bucket_name" {
 }
 
 variable "aws_tagging" {
-  description = "Tags to set on AWS objects"
+  description = "Tags to set on AWS Resources"
   type        = map(string)
   default = {
     "Team"        = "GCA-platform"
